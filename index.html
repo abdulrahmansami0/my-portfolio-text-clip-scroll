@@ -2,12 +2,131 @@
 <html lang="en" class="no-js">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>On-Scroll Text Animations with SVG Clip-Path | Codrops</title>
-		<meta name="description" content="Some experimental on-scroll typography effects using SVG clip-paths." />
-		<meta name="keywords" content="svg clip-path text, clip-path animation, on-scroll clip-path animations" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Abdulrahman Sami – Front-End Engineer & UI/UX Designer</title>
+		<meta name="description" content="Portfolio of Abdulrahman Sami, a front-end engineer crafting advanced interfaces with React, Mapbox, and modern web technologies." />
+		<meta name="keywords" content="Abdulrahman Sami, Front-End Developer, UI/UX Designer, React, Mapbox, Web Design, Interactive Interfaces, Creative Web Development, Iraq Developer" />
+		<meta name="author" content="Abdulrahman Sami" />
+		<link rel="shortcut icon" href="/img/1625171990615 (1).jpg" />
+		
+		<style>
+			.medium-section {
+				/* margin-top: -100px; */
+				padding: 0rem 2rem 4rem 2rem;
+				display: flex;
+				justify-content: center;
+				}
+
+				.medium-cards {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 2rem;
+				max-width: 1200px;
+				width: 100%;
+				justify-content: center;
+				}
+
+				.medium-card {
+				background-color: #111;
+				border: 1px solid #222;
+				padding: 2rem;
+				border-radius: 16px;
+				width: 100%;
+				max-width: 340px;
+				transition: all 0.3s ease;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				}
+
+				.medium-card:hover {
+				transform: translateY(-6px);
+				border-color: #ff6f91;
+				box-shadow: 0 6px 20px rgba(255, 111, 145, 0.1);
+				}
+
+				.medium-title {
+				font-size: 1.5rem;
+				color: #fff;
+				margin-bottom: 1rem;
+				font-family: 'freight-big-pro', serif;
+				}
+
+				.medium-excerpt {
+				color: #ccc;
+				font-size: 1rem;
+				line-height: 1.5;
+				flex-grow: 1;
+				margin-bottom: 1.5rem;
+				}
+
+				.medium-link {
+				color: #ff6f91;
+				font-weight: bold;
+				text-decoration: none;
+				transition: color 0.3s;
+				}
+
+				.medium-link:hover {
+				color: #ff89a9;
+				}
+
+
+				.experience-section {
+				padding: 4rem 2rem;
+				/* background-color: #0b0b0b; */
+				display: flex;
+				justify-content: center;
+				}
+
+				.experience-cards {
+				max-width: 1200px;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				gap: 2.5rem;
+				}
+
+				.experience-card {
+				background-color: #111;
+				border: 1px solid #222;
+				padding: 2rem;
+				border-radius: 16px;
+				transition: all 0.3s ease;
+				}
+
+				.experience-card:hover {
+				border-color: #ff6f91;
+				box-shadow: 0 4px 20px rgba(255, 111, 145, 0.15);
+				}
+
+				.exp-title {
+				font-size: 1.4rem;
+				font-weight: bold;
+				color: #fff;
+				font-family: 'freight-big-pro', serif;
+				margin-bottom: 0.3rem;
+				}
+
+				.exp-meta {
+				font-size: 0.95rem;
+				color: #aaa;
+				margin-bottom: 1rem;
+				}
+
+				.exp-details {
+				list-style: disc;
+				color: #ccc;
+				padding-left: 1.5rem;
+				line-height: 1.6;
+				}
+
+				.exp-details li {
+				margin-bottom: 0.5rem;
+				}
+
+
+		</style>
 		<script>
 		  (function(d) {
 		    var config = {
@@ -15,73 +134,157 @@
 		      scriptTimeout: 3000,
 		      async: true
 		    },
-		    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		    h=d.documentElement,
+			t=setTimeout(function(){
+				h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";
+			},
+			config.scriptTimeout),
+			tk=d.createElement("script"),
+			f=false,
+			s=d.getElementsByTagName("script")[0],a;
+			h.className+=" wf-loading";
+			tk.src='https://use.typekit.net/'+config.kitId+'.js';
+			tk.async=true;
+			tk.onload=tk.onreadystatechange=function(){
+				a=this.readyState;
+				if(f||a&&a!="complete"&&a!="loaded")return;
+				f=true;
+				clearTimeout(t);
+				try{Typekit.load(config)}catch(e){}};
+				s.parentNode.insertBefore(tk,s)
 		  })(document);
 		</script>
 		<link rel="stylesheet" type="text/css" href="css/base.css" />
 		<script>document.documentElement.className="js";</script>
+		<script>
+			// $(document).ready(function() {
+			// 	$(window).scroll(function() {
+			// 		var scrollPosition = $(window).scrollTop();
+			// 		$("#scrolling-text").css("transform", "translate(0, " + scrollPosition + "px)");
+			// 	});
+			// });
+			function smoothScroll(targetId) {
+				var targetElement = document.querySelector(targetId);
+				
+				if (targetElement) {
+					targetElement.scrollIntoView({ behavior: 'smooth' });
+				}
+			}
+		</script>
+
+ <!-- head content -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <style>
+   .social-section {
+	 display: flex;
+	 justify-content: flex-start;
+	 align-items: center;
+	 gap: 3rem;
+	 flex-wrap: wrap;
+	 text-align: center;
+   }
+
+   .social-link {
+	 text-decoration: none;
+	 color: #ff6f91;
+	 font-weight: bold;
+	 font-size: 1rem;
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 gap: 0.5rem;
+	 transition: all 0.3s ease;
+   }
+
+   .social-link i {
+	 font-size: 1.5rem;
+	 color: #ff6f91;
+	 transition: transform 0.3s ease;
+   }
+
+   .social-link:hover i {
+	 transform: scale(1.2);
+   }
+
+   .social-link:hover {
+	 color: #ff89a9;
+   }
+ </style>
 	</head>
-	<body class="loading">
+	<!-- <body 
+	class="loading"
+	> -->
+	<body>
 		<main>
 			<header class="frame">
-				<h1 class="frame__title">On-Scroll <br>Text Clip-Path <br>Animations</h1> 
+				<h1 class="frame__title"><span class="frame__title__first">Hi</span><br>I'm Abdulrahman Sami <br><span class="frame__title__second"> Front End Developer & UI/UX Designer </span></h1> 
+				<!-- <a  onclick="smoothScroll('#here')">here</a>
 				<a class="frame__back" href="https://tympanus.net/codrops/?p=75256">Article</a>
 				<a class="frame__prev" href="https://tympanus.net/Tutorials/ParticlesMusicVisualizer">Previous demo</a>
-				<a class="frame__sub" href="https://tympanus.net/codrops/collective/">Subscribe</a>
+				<a class="frame__sub" href="https://tympanus.net/codrops/collective/">Subscribe</a> -->
 			</header>
 			<div class="content">
 				<svg> 
-					<clipPath id="clip">
-						<text x="0ch" y="0.95em" class="line-1 font-7 size-3">X</text>
-						<text x="1ch" y="0.95em" class="line-1 font-7 size-3">o</text>
-						<text x="2ch" y="0.95em" class="line-1 font-7 size-3">g</text>
-						<text x="3ch" y="0.95em" class="line-1 font-7 size-3">o</text>
-						<text x="4ch" y="0.95em" class="line-1 font-7 size-3">x</text>
-						<text x="5ch" y="0.95em" class="line-1 font-7 size-3">y</text>
+					<clipPath id="clip" style="transform: translate(0px);">
+						<text x="0ch" y="0.95em" class="font-1 size-3">C</text>
+						<text x="1ch" y="0.95em" class="font-1 size-3">r</text>
+						<text x="2ch" y="0.95em" class="font-1 size-3">e</text>
+						<text x="3ch" y="0.95em" class="font-1 size-3">a</text>
+						<text x="4ch" y="0.95em" class="font-1 size-3">t</text>
+						<text x="5ch" y="0.95em" class="font-1 size-3">i</text>
+						<text x="6ch" y="0.95em" class="font-1 size-3">v</text>
+						<text x="7ch" y="0.95em" class="font-1 size-3">e</text>
 					</clipPath>
 					<clipPath id="clip-0">
-						<text x="0ch" y="0.95em" class="line-2 font-7 size-3">X</text>
-						<text x="1ch" y="0.95em" class="line-2 font-7 size-3">o</text>
-						<text x="2ch" y="0.95em" class="line-2 font-7 size-3">g</text>
-						<text x="3ch" y="0.95em" class="line-2 font-7 size-3">o</text>
-						<text x="4ch" y="0.95em" class="line-2 font-7 size-3">x</text>
-						<text x="5ch" y="0.95em" class="line-2 font-7 size-3">y</text>
+						<text x="0ch" y="0.95em" class="font-1 size-3">C</text>
+						<text x="1ch" y="0.95em" class="font-1 size-3">r</text>
+						<text x="2ch" y="0.95em" class="font-1 size-3">e</text>
+						<text x="3ch" y="0.95em" class="font-1 size-3">a</text>
+						<text x="4ch" y="0.95em" class="font-1 size-3">t</text>
+						<text x="5ch" y="0.95em" class="font-1 size-3">i</text>
+						<text x="6ch" y="0.95em" class="font-1 size-3">v</text>
+						<text x="7ch" y="0.95em" class="font-1 size-3">e</text>
 					</clipPath>
 				</svg>
 				<div class="poster poster--half" style="clip-path:url(#clip);--offset-x:10%;--offset-y:10%">
-					<div class="poster__inner" style="background-image:url(img/1.jpg);"></div>
+					<div class="poster__inner" style="background-image:url(img/kurdistan.jpg);"></div>
 				</div>
 				<div class="poster poster--half" style="clip-path:url(#clip-0);--offset-x:10%;--offset-y:10%">
-					<div class="poster__inner" style="background-image:url(img/2.jpg);"></div>
+					<div class="poster__inner" style="background-image:url(img/neshtiman-man.jpg);"></div>
 				</div>
 			</div>
 			<div class="content content--text">
-				<h4>Heart of adversity</h4>
-				<p>In the heart of adversity, the patient dragon reveals the alchemy of strength: to endure the fiercest storms with unwavering calm, for within the crucible of patience, resilience is forged into an indomitable force.</p>
+				<h4>Something About Me</h4>
+				<p>I'm Passionate software developer and UI/UX designer, I embark on a journey to create meaningful and impactful solutions that redefine the digital landscape, and I’m photographer also.</p>
+
 			</div>
 			<div class="content">
 				<svg> 
 					<clipPath id="clip-1">
-						<text x="0ch" y="0.95em" class="line-1 font-1 size-3">X</text>
-						<text x="1ch" y="0.95em" class="line-1 font-1 size-3">o</text>
-						<text x="2ch" y="0.95em" class="line-1 font-1 size-3">g</text>
-						<text x="3ch" y="0.95em" class="line-1 font-1 size-3">o</text>
-						<text x="4ch" y="0.95em" class="line-1 font-1 size-3">x</text>
-						<text x="5ch" y="0.95em" class="line-1 font-1 size-3">y</text>
+						<text x="0ch" y="0.95em" class="line-1 font-1 size-3">C</text>
+						<text x="1ch" y="0.95em" class="line-1 font-1 size-3">e</text>
+						<text x="2ch" y="0.95em" class="line-1 font-1 size-3">a</text>
+						<text x="3ch" y="0.95em" class="line-1 font-1 size-3">t</text>
+						<text x="4ch" y="0.95em" class="line-1 font-1 size-3">i</text>
+						<text x="5ch" y="0.95em" class="line-1 font-1 size-3">v</text>
 						<text x="6ch" y="0.95em" class="line-1 font-1 size-3">e</text>
-						<text x="7ch" y="0.95em" class="line-1 font-1 size-3">n</text>
-						<text x="8ch" y="0.95em" class="line-1 font-1 size-3">u</text>
-						<text x="9ch" y="0.95em" class="line-1 font-1 size-3">x</text>
-						<text x="10ch" y="0.95em" class="line-1 font-1 size-3">X</text>
-						<text x="11ch" y="0.95em" class="line-1 font-1 size-3">o</text>
-						<text x="12ch" y="0.95em" class="line-1 font-1 size-3">g</text>
-						<text x="13ch" y="0.95em" class="line-1 font-1 size-3">o</text>
-						<text x="14ch" y="0.95em" class="line-1 font-1 size-3">x</text>
-						<text x="15ch" y="0.95em" class="line-1 font-1 size-3">y</text>
+						<text x="7ch" y="0.95em" class="line-1 font-1 size-3">C</text>
+						<text x="8ch" y="0.95em" class="line-1 font-1 size-3">r</text>
+						<text x="9ch" y="0.95em" class="line-1 font-1 size-3">e</text>
+						<text x="10ch" y="0.95em" class="line-1 font-1 size-3">a</text>
+						<text x="11ch" y="0.95em" class="line-1 font-1 size-3">t</text>
+						<text x="12ch" y="0.95em" class="line-1 font-1 size-3">i</text>
+						<text x="13ch" y="0.95em" class="line-1 font-1 size-3">v</text>
+						<text x="14ch" y="0.95em" class="line-1 font-1 size-3">e</text>
+						<text x="15ch" y="0.95em" class="line-1 font-1 size-3">d</text>
 						<text x="16ch" y="0.95em" class="line-1 font-1 size-3">e</text>
-						<text x="17ch" y="0.95em" class="line-1 font-1 size-3">n</text>
-						<text x="18ch" y="0.95em" class="line-1 font-1 size-3">u</text>
-						<text x="19ch" y="0.95em" class="line-1 font-1 size-3">x</text>
+						<text x="17ch" y="0.95em" class="line-1 font-1 size-3">v</text>
+						<text x="18ch" y="0.95em" class="line-1 font-1 size-3">e</text>
+						<text x="20ch" y="0.95em" class="line-1 font-1 size-3">l</text>
+						<text x="21ch" y="0.95em" class="line-1 font-1 size-3">o</text>
+						<text x="22ch" y="0.95em" class="line-1 font-1 size-3">p</text>
+						<text x="23ch" y="0.95em" class="line-1 font-1 size-3">e</text>
+						<text x="24ch" y="0.95em" class="line-1 font-1 size-3">r</text>
 					</clipPath>
 					<clipPath id="clip-1-1">
 						<text x="0ch" y="0.95em" class="line-2 font-1 size-3">X</text>
@@ -94,204 +297,241 @@
 						<text x="7ch" y="0.95em" class="line-2 font-1 size-3">n</text>
 						<text x="8ch" y="0.95em" class="line-2 font-1 size-3">u</text>
 						<text x="9ch" y="0.95em" class="line-2 font-1 size-3">x</text>
-						<text x="10ch" y="0.95em" class="line-2 font-1 size-3">X</text>
-						<text x="11ch" y="0.95em" class="line-2 font-1 size-3">o</text>
-						<text x="12ch" y="0.95em" class="line-2 font-1 size-3">g</text>
-						<text x="13ch" y="0.95em" class="line-2 font-1 size-3">o</text>
-						<text x="14ch" y="0.95em" class="line-2 font-1 size-3">x</text>
-						<text x="15ch" y="0.95em" class="line-2 font-1 size-3">y</text>
+						<text x="10ch" y="0.95em" class="line-2 font-1 size-3">a</text>
+						<text x="11ch" y="0.95em" class="line-2 font-1 size-3">t</text>
+						<text x="12ch" y="0.95em" class="line-2 font-1 size-3">i</text>
+						<text x="13ch" y="0.95em" class="line-2 font-1 size-3">v</text>
+						<text x="14ch" y="0.95em" class="line-2 font-1 size-3">e</text>
+						<text x="15ch" y="0.95em" class="line-2 font-1 size-3">d</text>
 						<text x="16ch" y="0.95em" class="line-2 font-1 size-3">e</text>
-						<text x="17ch" y="0.95em" class="line-2 font-1 size-3">n</text>
-						<text x="18ch" y="0.95em" class="line-2 font-1 size-3">u</text>
-						<text x="19ch" y="0.95em" class="line-2 font-1 size-3">x</text>
+						<text x="17ch" y="0.95em" class="line-2 font-1 size-3">v</text>
+						<text x="18ch" y="0.95em" class="line-2 font-1 size-3">e</text>
+						<text x="20ch" y="0.95em" class="line-2 font-1 size-3">l</text>
+						<text x="21ch" y="0.95em" class="line-2 font-1 size-3">o</text>
+						<text x="22ch" y="0.95em" class="line-2 font-1 size-3">p</text>
+						<text x="23ch" y="0.95em" class="line-2 font-1 size-3">e</text>
+						<text x="24ch" y="0.95em" class="line-2 font-1 size-3">r</text>
 					</clipPath>
 				</svg>
 				<div class="poster poster--half" style="clip-path:url(#clip-1);--offset-x:10%;--offset-y:10%">
-					<div class="poster__inner" style="background-image:url(img/3.jpg);"></div>
+					<div class="poster__inner" style="background-image:url(img/1625171990650.jpg);"></div>
 				</div>
 				<div class="poster poster--half" style="clip-path:url(#clip-1-1);--offset-x:10%;--offset-y:10%">
-					<div class="poster__inner" style="background-image:url(img/4.jpg);"></div>
+					<div class="poster__inner" style="background-image:url(img/1669296138502\ \(1\).jpg);"></div>
 				</div>
 			</div>
 			<div class="content content--text">
-				<h4>Caverns of introspection</h4>
-				<p>Within the caverns of introspection, the patient dragon discovers the treasures of self-awareness, teaching that the journey inward, undertaken with deliberate slowness, unveils the hidden jewels of enlightenment, shimmering in the recesses of the soul.</p>
+				<h4>Solve your Problem with Code </h4>
+				<p>"A skilled Creative Developer blending ingenious code and intuitive design to craft exceptional products. Passionate about leveraging AI's potential to drive innovation and elevate user experiences."</p>
 			</div>
 			<div class="content">
 				<svg> 
 					<clipPath id="clip-2">
-						<text x="0ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-2 size-3">M</text>
-						<text x="1ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-2 size-3">o</text>
-						<text x="2ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-2 size-3">m</text>
-						<text x="3ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-2 size-3">o</text>
-						<text x="4ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-2 size-3">s</text>
-						<text x="5ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-2 size-3">o</text>
+						<text x="0ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">D</text>
+						<text x="1ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">e</text>
+						<text x="2ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">v</text>
+						<text x="3ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">e</text>
+						<text x="4ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">l</text>
+						<text x="5ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">o</text>
+						<text x="6ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">p</text>
+						<text x="7ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">e</text>
+						<text x="8ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">r</text>
+						<text x="9ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">a</text>
+						<text x="10ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">r</text>
+						<text x="11ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">t</text>
 					</clipPath>
 				</svg>
 				<div class="poster" style="clip-path:url(#clip-2);">
-					<div class="poster__inner" style="background-image:url(img/5.jpg);"></div>
+					<div class="poster__inner" style="background-image:url(img/IMG_20210808_200516_661\ \(1\).jpg);"></div>
 				</div>
 			</div>
 			</div>
 			<div class="content content--text">
-				<h4>Seasons change</h4>
-				<p>As the seasons change, so does the patient dragon adapt, its scales reflecting the myriad hues of nature's cycle. It imparts the lesson that, in embracing the ebb and flow of life's transitions, one discovers a harmonious dance with the cosmic rhythms that shape the universe.</p>
+				<h4>Creative Development</h4>
+				<p>I merge art and engineering to build dynamic web applications that are both beautiful and functional. From idea to interface, I believe in crafting digital experiences that feel intuitive and inspiring.</p>
 			</div>
 			<div class="content">
 				<svg> 
 					<clipPath id="clip-3">
-						<text x="0ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-3 size-2">n</text>
-						<text x="1ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-3 size-2">o</text>
-						<text x="2ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-3 size-2">n</text>
-						<text x="3ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-3 size-2">o</text>
-						<text x="4ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-3 size-2">n</text>
+						<text x="0ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">F</text>
+						<text x="1ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">i</text>
+						<text x="2ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">t</text>
+						<text x="3ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">n</text>
+						<text x="4ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">i</text>
+						<text x="5ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">s</text>
+						<text x="6ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">s</text>
 					</clipPath>
 				</svg>
 				<div class="poster" style="clip-path:url(#clip-3);--offset-x:20%;">
-					<div class="poster__inner" style="background-image:url(img/6.jpg);"></div>
+					<div class="poster__inner" style="background-image:url(img/moon.jpg);"></div>
 				</div>
 			</div>
 			<div class="content content--text">
-				<h4>Mist-shrouded valleys</h4>
-				<p>Through the mist-shrouded valleys, the patient dragon soars, leaving ephemeral trails of wisdom in its wake. It reveals that, like the ever-shifting mists, the only constant is change, and in patiently navigating the ethereal currents, one finds clarity in the midst of life's uncertainties.</p>
+				<h4>Map Systems & Visualization</h4>
+				<p>Specialized in interactive map solutions using Mapbox, I design geographic systems with custom polygon drawing, multi-level data storage, and advanced spatial filtering, powering real-world decision-making.</p>
 			</div>
 			<div class="content">
 				<svg> 
 					<clipPath id="clip-4">
-						<text x="0" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-4 size-2">s</text>
-						<text x="1ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-4 size-2">o</text>
-						<text x="2ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-4 size-2">x</text>
-						<text x="3ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-4 size-2">o</text>
-						<text x="4ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-4 size-2">s</text>
+						<text x="0ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">s</text>
+						<text x="1ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">o</text>
+						<text x="3ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">f</text>
+						<text x="4ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">t</text>
+						<text x="5ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">w</text>
+						<text x="6ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">a</text>
+						<text x="7ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">r</text>
+						<text x="8ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">e</text>
 					</clipPath>
 				</svg>
 				<div class="poster" style="clip-path:url(#clip-4);">
-					<div class="poster__inner" style="background-image:url(img/7.jpg);"></div>
+					<div class="poster__inner" style="background-image:url(img/neshtiman-man.jpg);"></div>
 				</div>
 			</div>
 			<div class="content content--text">
-				<h4>The world below</h4>
-				<p>High atop the cliffs, the patient dragon observes the world below with eyes that mirror the vastness of the cosmos. From this celestial vantage point, it imparts the understanding that true vision arises not from a gaze fixed on the horizon but from a gaze that encompasses the boundless expanse of the present moment.</p>
+				<h4>Real-time Communication</h4>
+				<p>I integrate messaging systems like WhatsApp and Telegram to deliver seamless real-time user interactions. Whether it’s caller management or live dashboards, I bring data to life in real time.</p>
 			</div>
 			<div class="content">
 				<svg> 
 					<clipPath id="clip-5">
-						<text x="0ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-5 size-2">b</text>
-						<text x="1ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-5 size-2">y</text>
-						<text x="2ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-5 size-2">o</text>
-						<text x="3ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-5 size-2">s</text>
-						<text x="4ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-5 size-2">o</text>
-						<text x="5ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-5 size-2">x</text>
+						<text x="0ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">b</text>
+						<text x="1ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">y</text>
+						<text x="2ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">o</text>
+						<text x="3ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">s</text>
+						<text x="4ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">o</text>
+						<text x="5ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-2">x</text>
 					</clipPath>
 				</svg>
-				<div class="poster" style="clip-path:url(#clip-5);">
-					<div class="poster__inner poster__inner--fixed" style="background-image:url(img/8.jpg);"></div>
+				<div class="poster" style="clip-path:url(#clip-5); filter: saturate(0.3) !important;">
+					<div class="poster__inner poster__inner--fixed" style="background-image:url(img/1625171990615\ \(1\).jpg); filter: saturate(0.3) !important;"></div>
 				</div>
 			</div>
 
 			<div class="content content--text">
-				<h4>Serene sanctuary</h4>
-				<p>In the serene sanctuary of the Patient Dragon, where ancient whispers met the modern hum, Liúlóng embraced tranquility amidst the chaos. Opting for a path less hurried, the dragon migrated to the fediverse&mdash;a decentralized haven where diversity bloomed, and open discourse prevailed.</p>
+				<h4>Data & Reports</h4>
+				<p>I build systems that transform data into actionable insights. Using tools like Excel parsing, Facebook API integration, and rich text reporting, I enable teams to track, analyze, and act faster.</p>
 			</div>
-			<div class="content">
+			<div class="content" id="here">
 				<svg> 
 					<clipPath id="clip-6">
-						<text x="0ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-6 size-3">k</text>
-						<text x="1ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-6 size-3">e</text>
-						<text x="2ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-6 size-3">l</text>
-						<text x="3ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-6 size-3">p</text>
-						<text x="4ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-6 size-3">f</text>
-						<text x="5ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-6 size-3">o</text>
-						<text x="6ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-6 size-3">r</text>
-						<text x="7ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-6 size-3">e</text>
-						<text x="8ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-6 size-3">s</text>
-						<text x="9ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-6 size-3">t</text>
-						<text x="10ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-6 size-3">s</text>
+						<text x="0ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">k</text>
+						<text x="1ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">e</text>
+						<text x="2ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">l</text>
+						<text x="3ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">p</text>
+						<text x="4ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">f</text>
+						<text x="5ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">o</text>
+						<text x="6ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">r</text>
+						<text x="7ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">e</text>
+						<text x="8ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">s</text>
+						<text x="9ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">t</text>
+						<text x="10ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-1 size-3">s</text>
 					</clipPath>
 				</svg>
 				<div class="poster" style="clip-path:url(#clip-6);">
-					<div class="poster__inner" style="background-image:url(img/2.jpg);"></div>
+					<div class="poster__inner" style="background-image:url(img/1625171990650.jpg);"></div>
 				</div>
 			</div>
 			<div class="content content--text">
-				<h4>Calm scales</h4>
-				<p>With calm scales, it soared into a digital realm echoing the patient strength found in interconnected communities, a sanctuary far from the clamor of mainstream platforms.</p>
+				<h4>Performance & Security</h4>
+				<p>From optimizing rendering speed to protecting against XSS, I follow clean code and SOLID principles to ensure systems are secure, scalable, and maintainable in production.</p>
 			</div>
-			<div class="content content--flex">
-				<svg class="h-200 w-25"> 
-					<clipPath id="clip-7">
-						<text x="50%" y="1em" dominant-baseline="middle" text-anchor="middle" class="font-8 size-4">l</text>
-						<text x="50%" y="2em" dominant-baseline="middle" text-anchor="middle" class="font-8 size-4">i</text>
-						<text x="50%" y="3em" dominant-baseline="middle" text-anchor="middle" class="font-8 size-4">u</text>
-						<text x="50%" y="4em" dominant-baseline="middle" text-anchor="middle" class="font-8 size-4">l</text>
-						<text x="50%" y="5em" dominant-baseline="middle" text-anchor="middle" class="font-8 size-4">o</text>
-						<text x="50%" y="6em" dominant-baseline="middle" text-anchor="middle" class="font-8 size-4">n</text>
-						<text x="50%" y="7em" dominant-baseline="middle" text-anchor="middle" class="font-8 size-4">g</text>
-					</clipPath>
-				</svg>
-				<div class="poster h-200 w-25" style="clip-path:url(#clip-7);">
-					<div class="poster__inner" style="background-image:url(img/9.jpg);"></div>
-				</div>
-				<svg class="h-200 w-25"> 
-					<clipPath id="clip-8">
-						<text x="50%" y="1em" dominant-baseline="middle" text-anchor="middle" class="font-8 size-4">g</text>
-						<text x="50%" y="2em" dominant-baseline="middle" text-anchor="middle" class="font-8 size-4">n</text>
-						<text x="50%" y="3em" dominant-baseline="middle" text-anchor="middle" class="font-8 size-4">o</text>
-						<text x="50%" y="4em" dominant-baseline="middle" text-anchor="middle" class="font-8 size-4">l</text>
-						<text x="50%" y="5em" dominant-baseline="middle" text-anchor="middle" class="font-8 size-4">u</text>
-						<text x="50%" y="6em" dominant-baseline="middle" text-anchor="middle" class="font-8 size-4">i</text>
-						<text x="50%" y="7em" dominant-baseline="middle" text-anchor="middle" class="font-8 size-4">l</text>
-					</clipPath>
-				</svg>
-				<div class="poster h-200 w-25" style="clip-path:url(#clip-8);">
-					<div class="poster__inner" style="background-image:url(img/10.jpg);"></div>
-				</div>
-			</div>
+
+
 			<div class="content content--text">
-				<h4>Ancient willow</h4>
-				<p>Beside the ancient willow, the patient dragon weaves tales of resilience, its wings brushing against the wisps of time. It teaches that, much like the willow bending but never breaking in the wind, the strength to endure lies in the supple flexibility of the spirit, shaped by the patient hands of experience.</p>
-			</div>
-			<div class="content">
-				<svg> 
-					<clipPath id="clip-9">
-						<text x="0ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-9 size-3">m</text>
-						<text x="1ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-9 size-3">o</text>
-						<text x="2ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-9 size-3">m</text>
-						<text x="3ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-9 size-3">o</text>
-						<text x="4ch" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-9 size-3">m</text>
-					</clipPath>
-				</svg>
-				<div class="poster" style="clip-path:url(#clip-9);">
-					<div class="poster__inner">
-						<video preload muted autoplay loop>
-							<source src="img/dragon.webm" type="video/webm" />
-							<source src="img/dragon.mp4" type="video/mp4" />
-						</video>
-					</div>
+				<h4>Medium Articles</h4>
+			  </div>
+			  <section class="medium-section">
+				<div class="medium-cards">
+				  <div class="medium-card">
+					<h3 class="medium-title">Harnessing the Power of SCSS in React: A Comprehensive Guide to Structuring and Styling Your Project</h3>
+					<p class="medium-excerpt">React has revolutionized the way we build dynamic user interfaces, and with the addition of SCSS, we can now take our styling capabilities to new heights. SCSS, as a powerful CSS preprocessor, offers features like variables, mixins, loops, and nested rules</p>
+					<a href="https://medium.com/@abdulrahmansami/harnessing-the-power-of-scss-in-react-a-comprehensive-guide-to-structuring-and-styling-your-e6d47efd54bb" target="_blank" class="medium-link">Read More →</a>
+				  </div>
+				  <div class="medium-card">
+					<h3 class="medium-title">Fueling Success: How self Motivation and Commitment Are Important</h3>
+					<p class="medium-excerpt">In life, there are moments that define who we are and shape our path. For me, one such moment was when I embarked on a journey into the world of artificial intelligence (AI). It was a decision driven by the motivation to challenge myself and explore the uncharted territory of this fascinating field.</p>
+					<a href="https://medium.com/@abdulrahmansami/fueling-success-how-self-motivation-and-commitment-are-important-4f84643b33a0" target="_blank" class="medium-link">Read More →</a>
+				  </div>
+				  <div class="medium-card">
+					<h3 class="medium-title">How to Getting Along with Your Coworkers</h3>
+					<p class="medium-excerpt">We all have many issus at work wherever we work like struggling to deal with a toxic co-worker who gossips constantly, whether they are with bosses or with co-workers. In this article, I will empower you to tackle work problems with confidence about some problems and solutions based on the situations I experienced and the research I did.</p>
+					<a href="https://medium.com/@abdulrahmansami/how-to-getting-along-with-your-coworkers-1d72b956f00f" target="_blank" class="medium-link">Read More →</a>
+				  </div>
 				</div>
-			</div>
+			  </section>
+
 			<div class="content content--text">
-				<h4>Silent narrative</h4>
-				<p>In the silent narrative woven by the patient dragon, a reminder emerges—that the hands of experience, marked by the passage of time, sculpt the spirit into a vessel of enduring strength, capable of navigating the ever-shifting currents of the cosmic dance.</p>
-			</div>
-			<div class="content content--more">
-				<h2 class="content__title">More you might like</h2>
-				<div class="card-wrap">
-					<div class="card">
-						<a href="https://tympanus.net/Development/OnScrollColumnsRows/" class="card__image" style="background-image:url(https://tympanus.net/codrops/wp-content/uploads/2023/08/OnScrollColumns.jpg)"></a>
-						<p class="card__title"><a href="https://tympanus.net/Development/OnScrollColumnsRows/">On-Scroll Column & Row Animations</a></p>
-					</div>
-					<div class="card">
-						<a href="http://tympanus.net/Development/Scroll3DGrid/" class="card__image" style="background-image:url(https://tympanus.net/codrops/wp-content/uploads/2023/08/onscroll3dgrid.jpg)"></a>
-						<p class="card__title"><a href="http://tympanus.net/Development/Scroll3DGrid/">On-Scroll Perspective Grid Animations</a></p>
-					</div>
-					<div class="card">
-						<a href="http://tympanus.net/Development/OnScrollFilter/" class="card__image" style="background-image:url(https://tympanus.net/codrops/wp-content/uploads/2023/07/onscrollfilter_feat-2.jpg)"></a>
-						<p class="card__title"><a href="http://tympanus.net/Development/OnScrollFilter/">On-Scroll SVG Filter Effect</a></p>
-					</div>
+				<h4>Experience</h4>
+			  </div>
+			  <section class="experience-section" style="margin-top: -100px;">
+				<div class="experience-cards">
+			  
+				  <!-- QAF Lab -->
+				  <div class="experience-card">
+					<h3 class="exp-title">Software Engineer</h3>
+					<p class="exp-meta">QAF Lab, Mosul – Iraq · Jul 2023 – Present</p>
+					<ul class="exp-details">
+					  <li>Built a custom polygon-based mapping app using React, Mapbox, and TypeScript with multi-level data storage.</li>
+					  <li>Created a reporting system with rich-text editing, Excel parsing, and Facebook API integration.</li>
+					  <li>Designed a Production Tracker with campaign stats, heatmaps, and team evaluation tools.</li>
+					  <li>Developed a dashboard with WhatsApp/Telegram integration and program scheduling (Radio Al Ghad).</li>
+					  <li>Improved legacy codebases using SOLID principles and added XSS security protections.</li>
+					  <li>Built unit + E2E tests using Vitest and Cypress. Mentored interns with code reviews and guidance.</li>
+					</ul>
+				  </div>
+			  
+				  <!-- Falaq -->
+				  <div class="experience-card">
+					<h3 class="exp-title">Front-end Developer & UI/UX Designer</h3>
+					<p class="exp-meta">Falaq, Mosul – Iraq · Jul 2022 – Oct 2022</p>
+					<ul class="exp-details">
+					  <li>Built landing pages using React, TypeScript, and MUI for improved UX and accessibility.</li>
+					  <li>Developed invoice and inventory systems for drugstore management.</li>
+					  <li>Collaborated on the Falaq dashboard using Figma for UI refinement.</li>
+					</ul>
+				  </div>
+			  
+				  <!-- University of Mosul -->
+				  <div class="experience-card">
+					<h3 class="exp-title">Front-end Developer (Volunteer)</h3>
+					<p class="exp-meta">University of Mosul, Iraq · Aug 2021 – May 2023</p>
+					<ul class="exp-details">
+					  <li>Developed a certificate issuance platform with React and TypeScript serving over 5,000 users.</li>
+					  <li>Optimized certificate generation to handle 500 certificates in 5 seconds.</li>
+					</ul>
+				  </div>
 				</div>
+			  </section>
+			<div class="content content--text">
+				<h4>Mentorship & Teamwork</h4>
+     			 <p>Beyond code, I lead by sharing knowledge—mentoring interns, conducting reviews, and fostering a culture of best practices and collaboration in every team I join.</p>
+    		</div>
+
+			
+			<div class="content content--text">
+				<h4>Connect With Me</h4>
+				<p>I'm always open to new connections, collaborations, or just a good conversation. Find me on these platforms:</p>
+				<div class="social-section">
+					<a class="social-link" href="https://www.linkedin.com/in/abdalrhman-sami" target="_blank">
+					  <i class="fab fa-linkedin"></i>
+					  <span>LinkedIn</span>
+					</a>
+					<a class="social-link" href="https://github.com/abdulrahmansami0?tab=repositories" target="_blank">
+					  <i class="fab fa-github"></i>
+					  <span>GitHub</span>
+					</a>
+					<a class="social-link" href="https://wa.me/9647709406231" target="_blank">
+					  <i class="fab fa-whatsapp"></i>
+					  <span>WhatsApp</span>
+					</a>
+					<a class="social-link" href="mailto:abdalrhmansami5@gmail.com">
+					  <i class="fas fa-envelope"></i>
+					  <span>Email</span>
+					</a>
+				  </div>
 			</div>
-			<p class="credits">Made by <a href="https://twitter.com/codrops">@codrops</a></p>
+			
+
 		</main>
 		<script src="js/imagesloaded.pkgd.min.js"></script>
 		<script src="js/gsap.min.js"></script>
