@@ -87,7 +87,7 @@ const SomethingAboutMe = () => {
           digital landscape, and I'm photographer also.
         </p>
       </div>
-      <div className="content" ref={containerRef}>
+      <div className="content" ref={containerRef} style={{ minHeight: "unset" }}>
         <svg>
           <clipPath id="clip-1" ref={clipRef1}>
             {"CreativeCreativedeveloper".split("").map((char, i) => (
